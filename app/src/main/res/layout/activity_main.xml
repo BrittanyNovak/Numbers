@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center_vertical|center_horizontal">
+
+    <TextView android:text="Shake to get a Random Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/tvHelp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etRandomNums"
+        android:text="00 00 00 00 00 00"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:gravity="bottom|center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/tvHelp"
+        android:layout_alignEnd="@+id/tvHelp"
+        android:layout_alignLeft="@+id/tvHelp"
+        android:layout_alignStart="@+id/tvHelp" />
+
+</RelativeLayout>
