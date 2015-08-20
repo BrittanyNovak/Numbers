@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Collections;
 import java.util.Random;
 
 
@@ -46,12 +47,13 @@ public class MainActivity extends ActionBarActivity {
             mAccelCurrent = (float) Math.sqrt((double)(x*x + y*y + z*z));
 
             float delta = mAccelCurrent - mAccelLast;
-            mAccel = mAccel * 0.9f + delta;
+            mAccel = mAccel * 0.10f + delta;
 
             if(mAccel > 12){
-                Toast toast = Toast.makeText(getApplicationContext(), "Shake It, Baby!!!!", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), "Here are your Powerball Numbers", Toast.LENGTH_LONG);
                 toast.show();
                 getRandomNum();
+                getRandNumb();
 
             }
         }
@@ -71,12 +73,26 @@ public class MainActivity extends ActionBarActivity {
         int i4 = r.nextInt(59) + 1;
         int i5 = r.nextInt(59) + 1;
         //Powerball Number
-        int ip = r.nextInt(35) + 1;
+
 
         String display = String.valueOf(i1) + " " + String.valueOf(i2) + " "
                + String.valueOf(i3) + " " + String.valueOf(i4) + " "
-                       + String.valueOf(i5) + " " + String.valueOf(ip);
+                       + String.valueOf(i5);
         etRandomNum.setText(display);
+
+
+
+    }
+
+    private void getRandNumb(){
+        EditText etRandNumb = (EditText)findViewById(R.id.etRandNumb);
+        Random b = new Random();
+
+        int ip = b.nextInt(35) + 1;
+
+        String display = String.valueOf(ip);
+
+        etRandNumb.setText(display);
 
     }
 
