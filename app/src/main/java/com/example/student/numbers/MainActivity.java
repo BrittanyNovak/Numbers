@@ -65,13 +65,13 @@ public class MainActivity extends ActionBarActivity {
         EditText etRandomNum = (EditText)findViewById(R.id.etRandomNums);
         Random r = new Random();
 
-        int i1 = r.nextInt(75) + 1;
-        int i2 = r.nextInt(75) + 1;
-        int i3 = r.nextInt(75) + 1;
-        int i4 = r.nextInt(75) + 1;
-        int i5 = r.nextInt(75) + 1;
+        int i1 = r.nextInt(59) + 1;
+        int i2 = r.nextInt(59) + 1;
+        int i3 = r.nextInt(59) + 1;
+        int i4 = r.nextInt(59) + 1;
+        int i5 = r.nextInt(59) + 1;
         //Powerball Number
-        int ip = r.nextInt(50) + 1;
+        int ip = r.nextInt(35) + 1;
 
         String display = String.valueOf(i1) + " " + String.valueOf(i2) + " "
                + String.valueOf(i3) + " " + String.valueOf(i4) + " "
